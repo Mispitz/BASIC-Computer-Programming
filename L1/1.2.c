@@ -1,21 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int N, i;
+  int score ;
 
-    if (scanf("%d", &N) != 1) {
-        return 1;
-    }
+  // Get score input and varidate
+  if ( scanf ( "%d" , &score ) != 1 ) {
+    printf ( " Error" ) ;
+    return 1 ;
+  }//end if
 
-    if (N <= 0) {
-        printf("Error");
-    } 
-    
-    else {
-        for (i = 0; i < N; i++) {
-            printf("Hello Loop!\n");
-        }
-    }
+  // Grading from score
+  if ( score >= 80 ) 
+    printf ( "Grade A" ) ;
+  else if ( score >= 70 && score < 80 )
+    printf ( "Grade B" ) ;
+  else if ( score >= 60 && score < 70 )
+    printf ( "Grade C" ) ;
+  else if ( score >= 50 && score < 60 )
+    printf ( "Grade D" ) ;
+  else
+    printf ( "Grade F" ) ;
 
-    return 0;
-}
+  return 0 ;
+}//end main function
